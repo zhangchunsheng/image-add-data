@@ -58,4 +58,18 @@ class TextToImageApi {
         }
         return false;
     }
+
+    public function showImage($url) {
+        header("Content-Type: image/png");
+
+        $file = fopen($url, "r");
+        $content = "";
+        while(!feof($file)) {
+            $content .= fgets($file);
+        }
+        fclose($file);
+
+        echo $content;
+        exit();
+    }
 }

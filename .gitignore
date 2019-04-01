@@ -1,0 +1,6 @@
+config/config.inc.php
+
+.idea
+.DS_Store
+
+.project

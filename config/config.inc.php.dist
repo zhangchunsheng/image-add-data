@@ -1,0 +1,69 @@
+<?php
+$hostNameParts = explode('.', isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : "");
+$domain = array_shift($hostNameParts);
+if ($domain == 'test') {
+    $domain = array_shift($hostNameParts);
+}
+$__global_env = $domain;
+
+define("DEBUG", 1);
+
+$__globalConfig_Db_master = array(
+    'database_type' => 'mysql',
+    'server' => '127.0.0.1',
+    'port' => 3306,
+    'charset' => 'utf8',
+    'username' => 'luomor',
+    'password' => '',
+);
+
+$__globalConfig = array(
+    'server_name' => $__global_env . '.iad-admin.luomor.com',
+    'url' => array(
+        'around' => 'http://iad.lan.luomor.com',
+    ),
+    'databases' => array(
+        'servers' => array(
+            'writer' => $__globalConfig_Db_master,
+        ),
+        'writers' => array(
+            'lm_sso' => 'writer',
+        ),
+    ),
+    'cache' => array(
+        'default'   =>'redis',
+        'redis' => array(
+            'host' => array('127.0.0.1'),
+            'prefix' => 0,
+            'persistent' => 1,
+        ),
+        'aerospike' => [
+            "hosts" => [
+                [ "addr" => "127.0.0.1", "port" => 3000 ],
+            ],
+            "shm"   => [ ],
+        ]
+    ),
+    'queue' => array(
+        'rabbitmq' => array(
+            "luomor_f1" => array (
+                'host' => array (
+                    '127.0.0.1',
+                ),
+                'port' => 5672,
+                'login' => 'luomor',
+                'password' => 'luomor',
+            ),
+            "luomor_f2" => array (
+                'host' => array (
+                    '127.0.0.1',
+                ),
+                'port' => 5672,
+                'login' => 'luomor',
+                'password' => 'luomor',
+            ),
+        ),
+    ),
+);
+
+return $__globalConfig;

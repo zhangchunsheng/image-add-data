@@ -1,0 +1,59 @@
+<?php
+$baiduMapKey = lm_config_get("map_baidu_key");
+$html = <<<HTML
+<script src="//api.map.baidu.com/api?v=2.0&s=1&ak=$baiduMapKey"></script>
+HTML;
+echo $html;
+?>
+<div id="div-map-select" class="modal" style="z-index:10000">
+    <div class="modal-dialog modal-map-dialog" style="width:800px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="map-header"></div>
+                    <div class="map-container" >
+                        <div class="col-md-8">
+                            <div class="select-modal-map" id="select-modal-map"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="map-address-list">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/template" id="map_select_template">
+    <div class="form-inline">
+        <div class="input-group">
+            <input type="text" class="form-control map-city" placeholder="城市名称"/>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                </ul>
+            </div>
+            <!-- /btn-group -->
+        </div>
+        <input type="text" class="form-control map-address" placeholder="检索地点" />
+        <input type="button" class="btn btn-primary map-address-search" value="检索" />
+        <input type="button" class="btn btn-primary set-map-location" value="设置坐标点" />
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" class="map-marker-drag"/> 设置点是否可拖动
+            </label>
+            <label>
+                <input type="checkbox" class="map-search-type" checked/> 当前地图检索
+            </label>
+        </div>
+    </div>
+</script>

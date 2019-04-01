@@ -1,0 +1,81 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">易周围管理平台</li>
+            <?php
+                $menus = array(
+                    array(
+                        "menu_name" => "商家管理",
+                        "url" => "/index",
+                        "class" => "fa-map-marker",
+                        "right_code" => "B",
+                    ),
+                    array(
+                        "menu_name"		=> "美食管理",
+                        "url"       	=> "food",
+                        "class"     	=> "fa-cog",
+                        "right_code" => "",
+                        "submenu" => array(
+                            array(
+                                "menu_name" => "美食管理",
+                                "url" => "/index",
+                                "class" => "fa-coffee",
+                                "right_code" => "H",
+                            ),
+                        )
+                    ),
+                );
+
+                $html = makeMenus($menus);
+                echo $html;
+
+                function makeMenus($menus, $parentMenu = array()) {
+                    $html = "";
+                    foreach($menus as $menu) {
+                        if(isset($menu["submenu"]) && count($menu["submenu"]) > 0) {
+                            $subHtml = makeMenus($menu["submenu"], $menu);
+                            if($subHtml != "") {
+                                $html .= '<li class="treeview">
+                                        <a href="#">
+                                            <i class="fa ' . $menu["class"] . '"></i>
+                                            <span>' . $menu["menu_name"] . '</span>
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </a>
+                                        <ul class="treeview-menu" style="display: none;">'
+                                        . $subHtml . '</ul>
+                                    </li>';
+                            }
+                        } else {
+                            $html .= makeMenu($menu, $parentMenu);
+                        }
+                    }
+                    return $html;
+                }
+
+                function makeMenu($menu, $parentMenu = array()) {
+                    if(\LM\Auth::allow($menu["right_code"])) {
+                        if(count($parentMenu) > 0) {
+                            return '<li>
+                                <a href="' . $menu["url"] . '">
+                                    <i class="fa ' . $menu["class"] . '"></i>
+                                    <span>' . $menu["menu_name"] . '</span>
+                                </a>
+                            </li>';
+                        } else {
+                            return '<li class="treeview">
+                                <a href="' . $menu["url"] . '">
+                                    <i class="fa ' . $menu["class"] . '"></i>
+                                    <span>' . $menu["menu_name"] . '</span>
+                                </a>
+                            </li>';
+                        }
+                    }
+                }
+            ?>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

@@ -1,0 +1,46 @@
+<?php
+$headerHtml = "";
+$this->display("section/header.phtml", array("headerHtml" => $headerHtml));
+?>
+<?php $this->display("section/left.phtml"); ?>
+<!-- Content Wrapper. Contains page content -->
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="/">首页</a>
+                </li>
+                <li class="active">易周围管理平台</li>
+            </ul><!-- /.breadcrumb -->
+        </div>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    易周围管理平台
+                    <small>
+                        <i class="ace-icon fa fa-angle-double-right"></i>
+                        跳转
+                    </small>
+                </h1>
+            </div><!-- /.page-header -->
+
+            <div class="row">
+                <?=$this->msg?>
+            </div>
+        </div><!-- /.page-content -->
+    </div>
+</div><!-- /.main-content -->
+<script>
+    function jump() {
+        window.location = '<?=$this->url?>';
+    }
+    var timeLen = <?=intval($this->time) ? intval($this->time) : 1500?>;
+
+    setTimeout('jump()', timeLen);
+
+</script>
+
+<?php $this->display("section/footer.phtml"); ?>

@@ -1,0 +1,56 @@
+.content {
+    height: 100%;
+}
+
+.tooltip-inner {
+    background-color: #73784f;
+}
+
+.td_desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px;
+}
+
+.td400_desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px;
+}
+
+.yc-modal-dialog {
+    width: 800px;
+}
+
+.modal {
+    overflow: auto !important;
+}
+
+#g_table {
+    min-height: 100px;
+}
+
+.map-select {
+    font-size: 10px;
+}
+
+.map-address {
+    min-width: 200px;
+}
+
+.map-address-list {
+    height: 500px;
+    overflow: auto;
+}
+
+.map-address-list > li {
+    list-style: none;
+}
+
+.select-modal-map {
+    width: 100%;
+    height: 500px;
+}
+

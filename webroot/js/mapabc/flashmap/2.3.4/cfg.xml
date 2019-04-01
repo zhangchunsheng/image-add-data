@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<DEFAULT_TRAFFIC_URL>http://tm.mapabc.com/trafficengine/mapabc/traffictile?</DEFAULT_TRAFFIC_URL>
+	<IMG_SVR_URL>http://res.mapabc.com/img/</IMG_SVR_URL>
+	<UBAS_URL>http://app.mapabc.com/flashmap-api-authen.jhtml?</UBAS_URL>
+	<DEFAULT_MAP_SERVER_URLS>http://emap0.is.autonavi.com/appmaptile?^^^,http://emap1.is.autonavi.com/appmaptile?^^^,http://emap2.is.autonavi.com/appmaptile?^^^,http://emap3.is.autonavi.com/appmaptile?^^^</DEFAULT_MAP_SERVER_URLS>
+	<GOOGLE_MAP_SERVER_URLS>http://mt0.google.cn/mt?v=cn1.4^^^hl=zh-CN^^^,http://mt1.google.cn/mt?v=cn1.4^^^hl=zh-CN^^^,http://mt2.google.cn/mt?v=cn1.4^^^hl=zh-CN^^^,http://mt3.google.cn/mt?v=cn1.4^^^hl=zh-CN^^^</GOOGLE_MAP_SERVER_URLS>
+	<SISSERVER_URLS>http://search1.mapabc.com/sisserver?</SISSERVER_URLS>
+	<GOOGLE_MAP_SATELLITE>http://khm0.google.cn/kh/v=37^^^hl=zh-CN^^^,http://khm1.google.cn/kh/v=37^^^hl=zh-CN^^^,http://khm2.google.cn/kh/v=37^^^hl=zh-CN^^^,http://khm3.google.cn/kh/v=37^^^hl=zh-CN^^^</GOOGLE_MAP_SATELLITE>
+	<MAP_SERVER_URLS>http://emap0.is.autonavi.com/appmaptile?layer=subway&,http://emap1.is.autonavi.com/appmaptile?layer=subway&,http://emap2.is.autonavi.com/appmaptile?layer=subway&,http://emap3.is.autonavi.com/appmaptile?layer=subway&</MAP_SERVER_URLS>
+	<ENGLISH_MAP_URL>http://enmap.is.autonavi.com/appmaptile?^^^</ENGLISH_MAP_URL>	<WMS_URL>http://60.247.103.15/cgi-bin/mapserv?mode=map^^^map=/opt/disk2/apache/htdocs/work/testcall.map</WMS_URL>
+	<GEOCODING_SERVER>http://search1.mapabc.com/sisserver</GEOCODING_SERVER>
+	<TRAFFIC_BOUNDS>
+		<BEIJING>116.154434,39.695772,116.589068,40.081323</BEIJING>
+		<SHANGHAI>120.633184,30.592997,121.719514,31.6602</SHANGHAI>
+		<GUANGZHOU>112.763325,22.701823,113.767736,23.681634</GUANGZHOU>
+		<SHENZHEN>113.5,22.100,114.4,22.7</SHENZHEN>
+		<CHENGDU>103.024493,30.093767,104.894523,31.442618</CHENGDU>
+		<NANJING>118.364635,31.227980,119.242591,32.609603</NANJING>
+		<SHENYANG>122.428105,41.195714,123.809565,43.041502</SHENYANG>
+		<WUHAN>113.6209514,29.90427139,115.1379367,31.41455067</WUHAN>
+		<HANGZHOU>119.5092773,29.93351504,120.86059570,30.57290295</HANGZHOU>
+		<QINGDAO>119.7866821,35.81113141,121.13800048,36.40912593</QINGDAO>
+		<CHONGQING>105.85739135,29.23128687,107.20870971,29.87518301</CHONGQING>
+		<NINGBO>120.87707519,29.54000879,122.22839355,30.18193473</NINGBO>
+	</TRAFFIC_BOUNDS>
+	<DEFAULT_DBCLICK_TIME>400</DEFAULT_DBCLICK_TIME>
+</root>

@@ -79,7 +79,7 @@ class Util {
         return array('name' => '未知', 'en' => 'Unknown', 'short' => '', 'country' => 'CN');
     }
 
-    function utf8Wordwrap($string, $width = 75, $break = "\n", $cut = false) {
+    public static function utf8Wordwrap($string, $width = 75, $break = "\n", $cut = false) {
         if($cut) {
             // Match anything 1 to $width chars long followed by whitespace or EOS,
             // otherwise match anything $width chars long

@@ -54,7 +54,7 @@ class TextToImageApi {
         // Return URL
         if (imagepng($image, $url)) {
             imagedestroy($image);
-            return true;
+            return $url;
         }
         return false;
     }

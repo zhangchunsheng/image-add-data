@@ -48,7 +48,7 @@ class TextToImageApi {
         $font = PS_ROOT . "/fonts/SimHei.ttf";
         for ($x = 0; $x <= count($str) - 1; $x++) {
             //imagestring($image, 20, 30, $y, $str[$x], $stringColor);
-            imagettftext($image, 20, 4, 30, $y, $stringColor, $font, $str[$x]);
+            imagettftext($image, 20, 0, 30, $y, $stringColor, $font, $str[$x]);
             $y += $times;
         }
 

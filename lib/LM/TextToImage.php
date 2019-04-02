@@ -29,8 +29,8 @@ class TextToImageApi {
     public function makeImageFromString($string) {
 
         // Split string without breaking words
-        //$str = explode("\n", Util::utf8Wordwrap($string, 50, "\n"));
-        $str = explode("\n", wordwrap($string, 50, "\n"));
+        $str = explode("\n", Util::utf8Wordwrap($string, 50, "\n"));
+        //$str = explode("\n", wordwrap($string, 50, "\n"));
         // Adjust height
         $adjustedHeight = count($str) * 20;
 
@@ -44,8 +44,10 @@ class TextToImageApi {
         // Starting y position
         $y = 0;
         // Loop to break lines in image
+        $font = PS_ROOT . "/fonts/SimHei.ttf";
         for ($x = 0; $x <= count($str) - 1; $x++) {
-            imagestring($image, 20, 30, $y, $str[$x], $stringColor);
+            //imagestring($image, 20, 30, $y, $str[$x], $stringColor);
+            imagettftext($image, 20, 4, 30, $y, $stringColor, $font, $str[$x]);
             $y += 20;
         }
 

@@ -158,6 +158,7 @@ class ImageUtil {
 
         //生成水印后的图片
         @unlink($groundImage);
+        print_r($groundInfo);exit();
 
         switch($groundInfo[2]) {//取得背景图片的格式
             case 1:
@@ -167,7 +168,6 @@ class ImageUtil {
                 imagejpeg($groundImg, $groundImage);
                 break;
             case 3:
-                echo "test";exit();
                 imagepng($groundImg, $groundImage);
                 break;
             default:

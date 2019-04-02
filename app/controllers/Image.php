@@ -39,7 +39,7 @@ Spring 学习路径
             ->setOpacity(.4);
 
         $url = "/images/test.png";
-        $watermark->setDebug(true);
+        //$watermark->setDebug(true);
         $ret = $watermark->withText('watermark', $url);
 
         $textToImage->showImage($url);

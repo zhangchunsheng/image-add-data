@@ -38,10 +38,11 @@ Spring 学习路径
 
         $watermark->setFontSize(48)
             ->setRotate(30)
-            ->setOpacity(.4);
+            ->setOpacity(.4)
+            ->setFont(PS_ROOT . "/fonts/SimHei.ttf");
 
         //$watermark->setDebug(true);
-        //$ret = $watermark->withText('易到用车', $url);
+        $ret = $watermark->withText('易到用车', $url);
         //\LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
 
         $textToImage->showImage($url);

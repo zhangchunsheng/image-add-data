@@ -144,15 +144,16 @@ class ImageUtil {
         if($isWaterImage) {//图片水印
             imagecopy($groundImg, $waterImg, $posX, $posY, 0, 0, $waterW, $waterH);//拷贝水印到目标文件
         } else {//文字水印
-            if(!empty($textColor) && (strlen($textColor)==7)) {
+            if(!empty($textColor) && (strlen($textColor) == 7)) {
                 $R = hexdec(substr($textColor,1,2));
                 $G = hexdec(substr($textColor,3,2));
                 $B = hexdec(substr($textColor,5));
             } else {
                 die("水印文字颜色格式不正确！");
             }
-            imagestring ($groundImg, $textFont, $posX, $posY, $waterText, imagecolorallocate($groundImg, $R, $G, $B));
-
+            $font = PS_ROOT . "/fonts/SimHei.ttf";
+            //imagestring($groundImg, $textFont, $posX, $posY, $waterText, imagecolorallocate($groundImg, $R, $G, $B));
+            imagettftext($groundImg, $textFont, 4, $posX, $posY, imagecolorallocate($groundImg, $R, $G, $B), $font, $waterText);
         }
 
         //生成水印后的图片
@@ -160,23 +161,23 @@ class ImageUtil {
 
         switch($groundInfo[2]) {//取得背景图片的格式
             case 1:
-                imagegif($groundImg,$groundImage);
+                imagegif($groundImg, $groundImage);
                 break;
             case 2:
-                imagejpeg($groundImg,$groundImage);
+                imagejpeg($groundImg, $groundImage);
                 break;
             case 3:
-                imagepng($groundImg,$groundImage);
+                imagepng($groundImg, $groundImage);
                 break;
             default:
                 die($groundInfo[2] . " is not support");
         }
 
         //释放内存
-        if(isset($water_info))
-            unset($water_info);
-        if(isset($water_im))
-            imagedestroy($water_im);
+        if(isset($waterInfo))
+            unset($waterInfo);
+        if(isset($waterImg))
+            imagedestroy($waterImg);
         unset($groundInfo);
         imagedestroy($groundImg);
     }

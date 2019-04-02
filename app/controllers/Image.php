@@ -34,6 +34,7 @@ Spring 学习路径
 
         $watermark = new \Ajaxray\PHPWatermark\Watermark($url);
 
+        echo DEBUG;exit();
         $watermark->setFontSize(48)
             ->setRotate(30)
             ->setOpacity(.4);

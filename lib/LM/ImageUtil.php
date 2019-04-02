@@ -80,7 +80,7 @@ class ImageUtil {
             $h = $waterH;
             $label = "图片的";
         } else {//文字水印
-            $temp = imagettfbbox(ceil($textFont * 5), 0, PS_ROOT . "/fonts/SimHei.ttf", $waterText);//取得使用 TrueType 字体的文本的范围
+            $temp = imagettfbbox(ceil($textFont), 0, PS_ROOT . "/fonts/SimHei.ttf", $waterText);//取得使用 TrueType 字体的文本的范围
             $w = $temp[2] - $temp[6];
             $h = $temp[3] - $temp[7];
             unset($temp);

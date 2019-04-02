@@ -41,7 +41,7 @@ Spring 学习路径
         //$retUrl = "/images/test.png";
         //$watermark->setDebug(true);
         //$ret = $watermark->withText('易到用车', $retUrl);
-        \LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
+        //\LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
 
         $textToImage->showImage($url);
     }

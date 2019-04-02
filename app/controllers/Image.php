@@ -45,6 +45,8 @@ Spring 学习路径
         $ret = $watermark->withText('易到用车', $url);
         //\LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
 
+        $image = new Imagick();
+
         $textToImage->showImage($url);
     }
 }

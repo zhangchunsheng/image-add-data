@@ -38,7 +38,7 @@ Spring 学习路径
             ->setRotate(30)
             ->setOpacity(.4);
 
-        $watermark->setDebug(true);
+        //$watermark->setDebug(true);
         $ret = $watermark->withText('易到用车', $url);
         //\LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
 

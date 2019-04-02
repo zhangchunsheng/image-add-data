@@ -39,7 +39,7 @@ Spring 学习路径
             ->setOpacity(.4);
 
         //$watermark->setDebug(true);
-        $ret = $watermark->withText('易到用车', $url);
+        //$ret = $watermark->withText('易到用车', $url);
         //\LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
 
         $textToImage->showImage($url);

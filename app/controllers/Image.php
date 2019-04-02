@@ -48,6 +48,7 @@ Spring 学习路径
 
         $manager = new \Intervention\Image\ImageManager(array('driver' => 'imagick'));
         $image = $manager->make($url)->insert($waterMarkUrl);
+        $image->save($url);
 
         $textToImage->showImage($url);
     }

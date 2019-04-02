@@ -32,7 +32,8 @@ class TextToImageApi {
         //$str = explode("\n", Util::utf8Wordwrap($string, 50, "\n"));
         $str = explode("\n", wordwrap($string, 50, "\n"));
         // Adjust height
-        $adjustedHeight = count($str) * 20;
+        $times = 30;
+        $adjustedHeight = count($str) * $times;
 
         // Generate Image
         $image = imagecreate(500, $adjustedHeight);
@@ -48,7 +49,7 @@ class TextToImageApi {
         for ($x = 0; $x <= count($str) - 1; $x++) {
             //imagestring($image, 20, 30, $y, $str[$x], $stringColor);
             imagettftext($image, 20, 4, 30, $y, $stringColor, $font, $str[$x]);
-            $y += 20;
+            $y += $times;
         }
 
         // Save image to current directory

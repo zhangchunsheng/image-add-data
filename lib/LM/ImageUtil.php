@@ -167,6 +167,7 @@ class ImageUtil {
                 imagejpeg($groundImg, $groundImage);
                 break;
             case 3:
+                echo "test";exit();
                 imagepng($groundImg, $groundImage);
                 break;
             default:

@@ -6,7 +6,7 @@ if ($domain == 'test') {
 }
 $__global_env = $domain;
 
-define("DEBUG", 1);
+defined('DEBUG') || define('DEBUG', 1);
 
 $__globalConfig_Db_master = array(
     'database_type' => 'mysql',

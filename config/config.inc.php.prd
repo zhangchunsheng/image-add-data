@@ -1,5 +1,5 @@
 <?php
-define("DEBUG", 1);
+defined('DEBUG') || define('DEBUG', 0);
 
 $__globalConfig_Db_master = array(
     'database_type' => 'mysql',

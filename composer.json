@@ -1,0 +1,14 @@
+{
+  "name": "image-add-data",
+  "description": "image add data",
+  "version": "1.0.0",
+  "keywords": [],
+  "authors": [
+    {
+      "name": "zhangchunsheng"
+    }
+  ],
+  "require": {
+    "php-watermark": "dev-master"
+  }
+}

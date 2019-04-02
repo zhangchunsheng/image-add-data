@@ -59,13 +59,13 @@ class ImageUtil {
             $groundH = $groundInfo[1];//取得背景图片的高
             switch($groundInfo[2]) {//取得背景图片的格式
                 case 1:
-                    $ground_im = imagecreatefromgif($groundImage);
+                    $groundImg = imagecreatefromgif($groundImage);
                     break;
                 case 2:
-                    $ground_im = imagecreatefromjpeg($groundImage);
+                    $groundImg = imagecreatefromjpeg($groundImage);
                     break;
                 case 3:
-                    $ground_im = imagecreatefrompng($groundImage);
+                    $groundImg = imagecreatefrompng($groundImage);
                     break;
                 default:
                     die($formatMsg);
@@ -140,9 +140,9 @@ class ImageUtil {
         }
 
         //设定图像的混色模式
-        imagealphablending($ground_im, true);
+        imagealphablending($groundImg, true);
         if($isWaterImage) {//图片水印
-            imagecopy($ground_im, $waterImg, $posX, $posY, 0, 0, $waterW, $waterH);//拷贝水印到目标文件
+            imagecopy($groundImg, $waterImg, $posX, $posY, 0, 0, $waterW, $waterH);//拷贝水印到目标文件
         } else {//文字水印
             if(!empty($textColor) && (strlen($textColor)==7)) {
                 $R = hexdec(substr($textColor,1,2));
@@ -151,7 +151,7 @@ class ImageUtil {
             } else {
                 die("水印文字颜色格式不正确！");
             }
-            imagestring ($ground_im, $textFont, $posX, $posY, $waterText, imagecolorallocate($ground_im, $R, $G, $B));
+            imagestring ($groundImg, $textFont, $posX, $posY, $waterText, imagecolorallocate($groundImg, $R, $G, $B));
 
         }
 
@@ -160,13 +160,13 @@ class ImageUtil {
 
         switch($groundInfo[2]) {//取得背景图片的格式
             case 1:
-                imagegif($ground_im,$groundImage);
+                imagegif($groundImg,$groundImage);
                 break;
             case 2:
-                imagejpeg($ground_im,$groundImage);
+                imagejpeg($groundImg,$groundImage);
                 break;
             case 3:
-                imagepng($ground_im,$groundImage);
+                imagepng($groundImg,$groundImage);
                 break;
             default:
                 die($groundInfo[2] . " is not support");
@@ -178,6 +178,6 @@ class ImageUtil {
         if(isset($water_im))
             imagedestroy($water_im);
         unset($groundInfo);
-        imagedestroy($ground_im);
+        imagedestroy($groundImg);
     }
 }

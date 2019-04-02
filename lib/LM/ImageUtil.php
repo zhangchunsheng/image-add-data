@@ -88,9 +88,8 @@ class ImageUtil {
         }
 
         if(($groundW < $w) || ($groundH < $h)) {
-            echo "需要加水印的图片的长度或宽度比水印" . $label . "还小，无法生成水印！";
-            exit();
-            return;
+            $errorMsg = "需要加水印的图片的长度或宽度比水印" . $label . "还小，无法生成水印！";
+            die($errorMsg);
         }
 
         switch($waterPos) {

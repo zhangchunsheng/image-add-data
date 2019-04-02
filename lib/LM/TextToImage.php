@@ -30,7 +30,7 @@ class TextToImageApi {
 
         // Split string without breaking words
         //$str = explode("\n", Util::utf8Wordwrap($string, 50, "\n"));
-        $str = explode("\n", wordwrap($string, 20, "\n"));
+        $str = explode("\n", wordwrap($string, 50, "\n"));
         // Adjust height
         $times = 30;
         $adjustedHeight = count($str) * $times;

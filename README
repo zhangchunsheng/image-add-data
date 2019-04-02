@@ -6,3 +6,4 @@ https://github.com/lzwme/bootstrap-suggest-plugin
 http://lzw.me/pages/demo/bootstrap-suggest-plugin/demo/
 
 sudo yum install ImageMagick
+sudo yum install php70-php-pecl-imagick

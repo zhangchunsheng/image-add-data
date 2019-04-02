@@ -43,7 +43,7 @@ class TextToImageApi {
         imagesetthickness($image, 5);
 
         // Starting y position
-        $y = 0;
+        $y = 20;
         // Loop to break lines in image
         $font = PS_ROOT . "/fonts/SimHei.ttf";
         for ($x = 0; $x <= count($str) - 1; $x++) {

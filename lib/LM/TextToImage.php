@@ -29,7 +29,7 @@ class TextToImageApi {
     public function makeImageFromString($string) {
 
         // Split string without breaking words
-        $str = explode("\n", Util::utf8Wordwrap($string, 50, "\n"));
+        //$str = explode("\n", Util::utf8Wordwrap($string, 50, "\n"));
         $str = explode("\n", wordwrap($string, 50, "\n"));
         // Adjust height
         $adjustedHeight = count($str) * 20;

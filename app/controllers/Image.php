@@ -41,7 +41,6 @@ Spring 学习路径
         $url = "/tmp/test.png";
         $watermark->setDebug(true);
         $ret = $watermark->withText('watermark', $url);
-        echo $ret; exit();
 
         $textToImage->showImage($url);
     }

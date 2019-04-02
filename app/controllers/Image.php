@@ -32,6 +32,14 @@ Spring 学习路径
 上述很多知识点都会在我的视频课《玩转 Spring 全家桶》（15000+ 程序员已经加入学习）中涉及到，整个课程以实战为主，在基础的实践之外，还会涉及一些背后的原理与相关的知识扩展。课程中有大量的示例，还有一个贯穿始终的在线咖啡馆系统——SpringBucks，包含了下单、制作、派送的步骤，麻雀虽小却五脏俱全，随着课程的推进会不断丰满，我们会基于 Spring Framework、Spring Boot 和 Spring Cloud 打造一个完整的系统。";
         $url = $textToImage->makeImageFromString($str);
 
+        $watermark = new \Ajaxray\PHPWatermark\Watermark($url);
+
+        $watermark->setFontSize(48)
+            ->setRotate(30)
+            ->setOpacity(.4);
+
+        $watermark->withText('watermark', $url);
+
         $textToImage->showImage($url);
     }
 }

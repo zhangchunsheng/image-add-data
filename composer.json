@@ -9,6 +9,6 @@
     }
   ],
   "require": {
-    "php-watermark": "dev-master"
+    "ajaxray/php-watermark": "dev-master"
   }
 }

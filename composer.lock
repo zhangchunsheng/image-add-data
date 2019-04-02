@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7053f968e2ac275e00bec7be5326a2b2",
+    "content-hash": "1a5cbe952cf153641de42bbc0a54d4fd",
     "packages": [
         {
             "name": "ajaxray/php-watermark",
@@ -53,6 +53,56 @@
                 "watermark"
             ],
             "time": "2017-03-18T05:50:04+00:00"
+        },
+        {
+            "name": "dsgygb/text2pic",
+            "version": "v1.2.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dsgygb/text2pic.git",
+                "reference": "e86b61e87dcd3e9f339d437c738b9a1674fc485d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dsgygb/text2pic/zipball/e86b61e87dcd3e9f339d437c738b9a1674fc485d",
+                "reference": "e86b61e87dcd3e9f339d437c738b9a1674fc485d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Text2pic\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "杨国宝",
+                    "email": "dsgygb@126.com",
+                    "homepage": "http://www.yangguobao.cn",
+                    "role": "Developer"
+                }
+            ],
+            "description": "文字生成图片,生成长微博,text generate picture",
+            "homepage": "https://github.com/dsgygb/text2pic",
+            "keywords": [
+                "generate picture",
+                "text2pic",
+                "文字生成图片"
+            ],
+            "time": "2015-10-02T14:32:48+00:00"
         },
         {
             "name": "guzzlehttp/psr7",

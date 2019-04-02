@@ -39,7 +39,7 @@ class TextToImageApi {
         $bgColor = imagecolorallocate($image, 255, 255, 255);
         $stringColor = imagecolorallocate($image, 0, 0, 0);
         $fontHeight = imagefontheight(20);
-        imagesetthickness ($image, 5);
+        imagesetthickness($image, 5);
 
         // Starting y position
         $y = 0;

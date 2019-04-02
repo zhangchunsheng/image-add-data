@@ -33,7 +33,7 @@ class ImageUtil {
 
         //读取水印文件
         if(!empty($waterImage) && file_exists($waterImage)) {
-            $isWaterImage = TRUE;
+            $isWaterImage = true;
             $waterInfo = getimagesize($waterImage);
             $water_w = $waterInfo[0];//取得水印图片的宽
             $water_h = $waterInfo[1];//取得水印图片的高

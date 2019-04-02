@@ -73,7 +73,6 @@ class ImageUtil {
         } else {
             die("需要加水印的图片不存在！");
         }
-        print_r($groundInfo);exit();
 
         //水印位置
         if($isWaterImage) {//图片水印
@@ -90,6 +89,7 @@ class ImageUtil {
 
         if(($groundW < $w) || ($groundH < $h)) {
             echo "需要加水印的图片的长度或宽度比水印" . $label . "还小，无法生成水印！";
+            exit();
             return;
         }
 

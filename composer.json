@@ -10,6 +10,7 @@
   ],
   "require": {
     "ajaxray/php-watermark": "v0.1.1",
-    "intervention/image": "2.4.2"
+    "intervention/image": "2.4.2",
+    "dsgygb/text2pic": "v1.2.9"
   }
 }

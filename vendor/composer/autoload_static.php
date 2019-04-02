@@ -6,7 +6,24 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit4c4d747e6d7a32f8a8bf32a033f75349
 {
+    public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'Psr\\Http\\Message\\' => 17,
+        ),
+        'I' => 
+        array (
+            'Intervention\\Image\\' => 19,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+        ),
         'A' => 
         array (
             'Ajaxray\\PHPWatermark\\' => 21,
@@ -14,6 +31,18 @@ class ComposerStaticInit4c4d747e6d7a32f8a8bf32a033f75349
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Intervention\\Image\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
         'Ajaxray\\PHPWatermark\\' => 
         array (
             0 => __DIR__ . '/..' . '/ajaxray/php-watermark/src/Ajaxray/PHPWatermark',

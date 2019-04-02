@@ -1,5 +1,5 @@
 {
-  "name": "image-add-data",
+  "name": "image_add_data",
   "description": "image add data",
   "version": "1.0.0",
   "keywords": [],
@@ -9,6 +9,7 @@
     }
   ],
   "require": {
-    "ajaxray/php-watermark": "dev-master"
+    "ajaxray/php-watermark": "dev-master",
+    "intervention/image": "dev-master"
   }
 }

@@ -73,6 +73,7 @@ class ImageUtil {
         } else {
             die("需要加水印的图片不存在！");
         }
+        print_r($groundInfo);exit();
 
         //水印位置
         if($isWaterImage) {//图片水印
@@ -158,7 +159,6 @@ class ImageUtil {
 
         //生成水印后的图片
         @unlink($groundImage);
-        print_r($groundInfo);exit();
 
         switch($groundInfo[2]) {//取得背景图片的格式
             case 1:

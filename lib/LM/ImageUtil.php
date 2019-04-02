@@ -28,7 +28,7 @@ class ImageUtil {
      */
 
     public static function imageWaterMark($groundImage, $waterPos = 0, $waterImage = "", $waterText = "", $textFont = 5, $textColor = "#FF0000") {
-        $isWaterImage = FALSE;
+        $isWaterImage = false;
         $formatMsg = "暂不支持该文件格式，请用图片处理软件将图片转换为GIF、JPG、PNG格式。";
 
         //读取水印文件

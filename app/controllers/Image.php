@@ -38,8 +38,8 @@ Spring 学习路径
             ->setRotate(30)
             ->setOpacity(.4);
 
-        $url = "/tmp/test.png";
-        $watermark->withText('watermark', $url);
+        //$url = "/tmp/test.png";
+        //$watermark->withText('watermark', $url);
 
         $textToImage->showImage($url);
     }

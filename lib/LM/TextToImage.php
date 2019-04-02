@@ -53,8 +53,8 @@ class TextToImageApi {
         }
 
         // Save image to current directory
-        //$url = '/images/generated-image-' . uniqid() . '.png';
-        $url = '/images/generated-image-test.png';
+        $url = '/images/generated-image-' . uniqid() . '.png';
+        //$url = '/images/generated-image-test.png';
 
         // Return URL
         if (imagepng($image, $url)) {

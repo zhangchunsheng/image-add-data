@@ -6,6 +6,8 @@
  * Time: 2:28 PM
  */
 
+use Intervention\Image\ImageManagerStatic as Image;
+
 class ImageController extends ApplicationController {
     // protected $layout = 'frontend';
 
@@ -41,6 +43,11 @@ Spring 学习路径
         //$watermark->setDebug(true);
         //$ret = $watermark->withText('易到用车', $url);
         //\LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
+
+        $waterMarkUrl = $textToImage->makeImageFromString("易到用车");
+
+        $manager = new \Intervention\Image\ImageManager(array('driver' => 'imagick'));
+        $image = $manager->make($url)->insert($waterMarkUrl);
 
         $textToImage->showImage($url);
     }

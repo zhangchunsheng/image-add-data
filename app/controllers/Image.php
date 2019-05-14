@@ -42,7 +42,7 @@ Spring 学习路径
             ->setFont(PS_ROOT . "/fonts/SimHei.ttf");
 
         //$watermark->setDebug(true);
-        $ret = $watermark->withText('易到用车', $url);
+        $ret = $watermark->withText('test', $url);
         //\LM\ImageUtil::imageWaterMark($url, 0, "", "易到用车", 40);
 
         $image = new Imagick();

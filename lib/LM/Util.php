@@ -16,7 +16,7 @@ class Util {
         return $schema . "://" . $host . $port . html_entity_decode($requestUri);
     }
 
-    private static $_salt = "4ff350bde75104703989e2139e9ed1c4";
+    private static $_salt = "4dcffe5eed0623e7c6e2292907618e96";
 
     public static function encryptSource($source) {
         $sign = substr(sprintf("%u", crc32($source . self::$_salt)), -2);
